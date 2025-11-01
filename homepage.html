@@ -3,52 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <style>
-        body{
-            padding:30px;
-            background:linear-gradient(to right, #e2e2e2, #c9d6ff);
-        }
-        h1{
-            text-align:center;
-
-        }
-        button{
-            color:blueviolet;
-            background-color:#c9d6ff;
-            padding:5px;
-            border-radius:5px;
-            font-size:1rem;
-            font-weight:bold;
-            border:none;
-        }
-        button:hover{
-            text-decoration: underline;
-            color:blue;
-        }
-        button, div{
-            margin-left:15%;
-            font-size:20px;
-            padding:10px;
-        }
-        div{
-            font-weight:400;
-            color:rgb(12,11,11);
-
-        }
-        span{
-            font-weight:600;
-            font-size:22px;
-            color:black;
-        }
-    </style>
-    <script type="module" src="./homepage.js"></script>
+    <title>Homepage - Proyek Cloud</title>
+    
+    <link rel="stylesheet" href="homepage.css">
+    
+    <script type="module" src="./homepage.js" defer></script>
 </head>
 <body>
-    <h1>Welcome to the Homepage</h1>
-    <div>First Name: <span id="loggedUserFName"></span></div>
-    <div>Last Name: <span id="loggedUserLName"></span></div>
-    <div>Email: <span id="loggedUserEmail"></span></div>
-    <button id="logout">Logout</button>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-brand">Proyek Cloud Anda</a>
+            <button id="logout" class="nav-button">Logout</button>
+        </div>
+    </nav>
+
+    <main class="main-container">
+
+        <div class="card welcome-card">
+            <h2>Selamat Datang!</h2>
+            <p>Anda telah berhasil login ke dasbor Anda.</p>
+            <div class="user-info">
+                <div class="info-item">
+                    <strong>First Name:</strong>
+                    <span id="loggedUserFName">Loading...</span>
+                </div>
+                <div class="info-item">
+                    <strong>Last Name:</strong>
+                    <span id="loggedUserLName">Loading...</span>
+                </div>
+                <div class="info-item">
+                    <strong>Email:</strong>
+                    <span id="loggedUserEmail">Loading...</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="card content-card">
+            <h2>Sejarah Singkat Cloud Computing</h2>
+            <p>
+                Konsep "cloud computing" berakar pada tahun 1960-an melalui J.C.R. Licklider dan konsepnya tentang "Galactic Network", di mana ia membayangkan komputer yang terhubung secara global tempat setiap orang dapat mengakses data dan program.
+            </p>
+            
+            <h3>Era Modern Dimulai</h3>
+            <p>
+                Namun, cloud computing seperti yang kita kenal sekarang baru benar-benar muncul pada tahun 1999 dengan berdirinya <strong>Salesforce.com</strong>. Mereka memelopori konsep pengiriman aplikasi perusahaan melalui antarmuka web sederhana, membuktikan bahwa perangkat lunak dapat dikirimkan sebagai layanan (Software-as-a-Service atau SaaS).
+            </p>
+            
+            <h3>Kelahiran Infrastruktur Cloud</h3>
+            <p>
+                Lompatan besar berikutnya terjadi pada tahun 2006 ketika <strong>Amazon Web Services (AWS)</strong> diluncurkan. AWS memulai dengan menawarkan layanan infrastruktur (Infrastructure-as-a-Service atau IaaS) seperti Elastic Compute Cloud (EC2) dan Simple Storage Service (S3). Ini memungkinkan developer untuk menyewa kapasitas komputasi dan penyimpanan sesuai kebutuhan tanpa harus membeli perangkat keras fisik.
+            </p>
+            <p>
+                Sejak saat itu, raksasa teknologi lain seperti Google (dengan Google Cloud Platform) dan Microsoft (dengan Azure) mengikuti, menciptakan industri multi-miliar dolar yang menjadi tulang punggung internet modern.
+            </p>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Proyek Tugas Cloud Networking & Cybersecurity.</p>
+    </footer>
+
 </body>
 </html>

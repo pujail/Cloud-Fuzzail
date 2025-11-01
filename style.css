@@ -1,148 +1,207 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"poppins",sans-serif;
+/* GANTI SELURUH ISI FILE style.css DENGAN KODE INI */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Menggunakan font sistem yang bersih dan modern */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
-body{
-    background-color: #c9d6ff;
-    background:linear-gradient(to right,#e2e2e2,#c9d6ff);
-}
-.container{
-    background:#fff;
-    width:450px;
-    padding:1.5rem;
-    margin:50px auto;
-    border-radius:10px;
-    box-shadow:0 20px 35px rgba(0,0,1,0.9);
-}
-form{
-    margin:0 2rem;
-}
-.form-title{
-    font-size:1.5rem;
-    font-weight:bold;
-    text-align:center;
-    padding:1.3rem;
-    margin-bottom:0.4rem;
-}
-input{
-    color:inherit;
-    width:100%;
-    background-color:transparent;
-    border:none;
-    border-bottom:1px solid #757575;
-    padding-left:1.5rem;
-    font-size:15px;
-}
-.input-group{
-    padding:1% 0;
-    position:relative;
 
+body {
+    /* Latar belakang solid yang profesional */
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
-.input-group i{
-    position:absolute;
-    color:black;
+
+.container {
+    background: #fff;
+    width: 100%;
+    max-width: 420px; /* Lebar maksimal yang ideal */
+    padding: 2.5rem;
+    margin: 20px auto;
+    border-radius: 10px;
+    /* Bayangan (shadow) yang lebih lembut dan modern */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
-input:focus{
+
+form {
+    margin: 0; /* Hapus margin horizontal yang tidak perlu */
+}
+
+.form-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.input-group {
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.input-group i {
+    position: absolute;
+    color: #888;
+    left: 0; /* Posisikan ikon di kiri */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input {
+    color: #333;
+    width: 100%;
     background-color: transparent;
-    outline:transparent;
-    border-bottom:2px solid hsl(327,90%,28%);
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding-left: 1.8rem; /* Beri ruang untuk ikon */
+    padding-bottom: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s;
 }
-input::placeholder{
-    color:transparent;
-}
-label{
-    color:#757575;
-    position:relative;
-    left:1.2em;
-    top:-1.3em;
-    cursor:auto;
-    transition:0.3s ease all;
-}
-input:focus~label,input:not(:placeholder-shown)~label{
-    top:-3em;
-    color:hsl(327,90%,28%);
-    font-size:15px;
-}
-.recover{
-    text-align:right;
-    font-size:1rem;
-    margin-bottom:1rem;
 
+input:focus {
+    background-color: transparent;
+    outline: none;
+    /* Ganti warna fokus ke biru profesional */
+    border-bottom: 2px solid #007bff;
 }
-.recover a{
-    text-decoration:none;
-    color:rgb(125,125,235);
+
+input::placeholder {
+    color: transparent;
 }
-.recover a:hover{
-    color:blue;
-    text-decoration:underline;
+
+label {
+    color: #757575;
+    position: absolute; /* Ubah ke absolute untuk animasi */
+    left: 1.8rem;
+    top: 0.8rem; /* Sesuaikan posisi awal */
+    cursor: text;
+    transition: 0.3s ease all;
 }
-button{
-    font-size:1.1rem;
-    padding:8px 0;
-    border-radius:5px;
-    outline:none;
-    border:none;
-    width:100%;
-    background:rgb(125,125,235);
-    color:white;
-    cursor:pointer;
-    transition:0.9s;
+
+input:focus~label,
+input:not(:placeholder-shown)~label {
+    top: -1.2em; /* Geser ke atas */
+    /* Ganti warna label ke biru */
+    color: #007bff;
+    font-size: 0.9rem;
 }
-button:hover{
-    background:#07001f;
+
+.recover {
+    text-align: right;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    margin-top: -0.5rem;
 }
-.or{
-    font-size:1.1rem;
-    margin-top:0.5rem;
-    text-align:center;
+
+.recover a {
+    text-decoration: none;
+    color: #007bff; /* Warna link biru */
 }
-.icons{
-    text-align:center;
+
+.recover a:hover {
+    color: #0056b3;
+    text-decoration: underline;
 }
-.icons i{
-    color:rgb(125,125,235);
-    padding:0.8rem 1.5rem;
-    border-radius:10px;
-    font-size:1.5rem;
-    cursor:pointer;
-    border:2px solid #dfe9f5;
-    margin:0 15px;
-    transition:1s;
-}
-.icons i:hover{
-    background:#07001f;
-    font-size:1.6rem;
-    border:2px solid rgb(125,125,235);
-}
-.links{
-    display:flex;
-    justify-content:space-around;
-    padding:0 4rem;
-    margin-top:0.9rem;
-    font-weight:bold;
-}
- #signUpButton, #signInButton{
-    color:rgb(125,125,235);
-    border:none;
-    background-color:transparent;
-    font-size:1rem;
-    font-weight:bold;
-}
-#signUpButton:hover, #signInButton:hover {
-    text-decoration:underline;
-    color:blue;
-} 
-.messageDiv{
-    background-color:hsl(327,90%,28%);
-    color:white;
-    padding:10px 20px;
-    margin:10px;
+
+/* Menggunakan .btn untuk konsistensi di index.html */
+.btn {
+    font-size: 1.1rem;
+    padding: 12px 0;
     border-radius: 5px;
-    font-size:1rem;
-    opacity:0;
-    animation:fadeOut 7s forwards;
+    outline: none;
+    border: none;
+    width: 100%;
+    /* Ganti ke warna biru profesional */
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
 
+.btn:hover {
+    background: #0056b3; /* Warna hover lebih gelap */
+}
+
+.or {
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #aaa;
+}
+
+.icons {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Beri jarak antar ikon */
+}
+
+.icons i {
+    color: #555; /* Warna ikon lebih netral */
+    padding: 0;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    transition: color 0.3s;
+}
+
+.icons i.fa-google:hover {
+    color: #DB4437; /* Warna Google */
+}
+
+.icons i.fa-facebook:hover {
+    color: #4267B2; /* Warna Facebook */
+}
+
+.links {
+    display: flex;
+    justify-content: center; /* Pusatkan link */
+    gap: 0.5rem;
+    padding: 0;
+    margin-top: 2rem;
+    font-weight: 500;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+#signUpButton,
+#signInButton {
+    color: #007bff; /* Warna link biru */
+    border: none;
+    background-color: transparent;
+    font-size: 0.9rem;
+    font-weight: 600; /* Tebalkan tombol */
+    cursor: pointer;
+    padding: 0;
+}
+
+#signUpButton:hover,
+#signInButton:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.messageDiv {
+    /* Ganti warna pesan error ke merah yang lebih standar */
+    background-color: #d93025;
+    color: white;
+    padding: 10px 15px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    opacity: 0;
+    animation: fadeOut 7s forwards;
+    text-align: center;
 }
