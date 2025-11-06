@@ -19,6 +19,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getFirestore();
+window.db = db;
 
 // LOGIKA onAuthStateChanged YANG DIPERBAIKI
 onAuthStateChanged(auth, (user) => {
